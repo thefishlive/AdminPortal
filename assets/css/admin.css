@@ -1,0 +1,90 @@
+body {
+	width: 100%;
+}
+
+#alerts-container {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    z-index: 1100;
+}
+     
+#alerts-container .toast {
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 10px;
+	background-color: rgba(190, 190, 190, 0.3);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+body {
+	margin-top: 80px;
+}
+
+.navbar {
+	background-color: rgba(222, 215, 215, 0.85);
+}
+
+.center {
+	text-align:center;
+}
+
+.right {
+	text-align:right;
+}
+
+.brand {
+	padding-left: 8px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.username {
+	font-size: 20px;
+	font-weight: 200;
+	color: rgb(119, 119, 119);
+	text-shadow: 0px 1px 0px rgb(255, 255, 255);
+	padding-top: 15px;
+	padding-right: 10px;
+}
+
+#sidebar-left {
+	position: fixed;
+	display: block;
+	float: left;
+	margin-left: 1.25%;
+	width: 17.5%;
+}
+
+#sidebar-right {
+	position: fixed;
+	float: right;
+	margin-right: 1.25%;
+	width: 17.5%;
+}
+
+.reload {
+	cursor: pointer;
+}
+
+.nav-item {
+	cursor: pointer;
+}
+
+#create-permlink {
+	color: rgb(119, 119, 119);
+}
