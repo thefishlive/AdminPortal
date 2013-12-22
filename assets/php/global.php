@@ -1,10 +1,11 @@
 <?php
 
+define ("DEBUG", TRUE)
 define ("FORUM", 1);
 define ("ASSETS", 2);
 define ("CONTENT", 3);
 
-error_reporting(0);
+error_reporting(DEBUG ? E_ALL : 0);
 
 class Utils {
 
@@ -19,7 +20,7 @@ class Utils {
 			case 2:
 				break;
 			case 3:
-				$path .= self::$basedir . "cotent/";
+				$path .= self::$basedir . "content/";
 				break;
 		}
 
