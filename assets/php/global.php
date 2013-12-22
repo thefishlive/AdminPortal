@@ -1,11 +1,11 @@
 <?php
 
-define ("DEBUG", TRUE);
+$debug = TRUE;
 define ("FORUM", 1);
 define ("ASSETS", 2);
 define ("CONTENT", 3);
 
-error_reporting(DEBUG ? E_ALL : 0);
+error_reporting($debug ? E_ALL : 0);
 
 class Utils {
 
