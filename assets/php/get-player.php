@@ -1,7 +1,7 @@
 <?php
 
 	require_once 'global.php';
-	error_reporting(0);
+	error_reporting(E_ALL);
 	
     function formattime($time) {
         $days = floor($time / 86400);

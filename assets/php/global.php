@@ -135,12 +135,12 @@ class Config {
 class Database {
 
 	public static function openMysqliConnection() {
-		$link = mysqli_connnect(Config::getDBHost(), Config::getDBUser(), Config::getDBPassword(), Config::getDBDatabase()) or die ("Error: Could not connect to database. (" . mysqli_error($link) . ")");
+		$link = mysqli_connect(Config::getDBHost(), Config::getDBUser(), Config::getDBPassword(), Config::getDBDatabase()) or die ("Error: Could not connect to database. (" . mysqli_error($link) . ")");
 		return $link;
 	}
 
 	public static function openMysqlConnection() {
-		$link = mysql_connnect(Config::getDBHost(), Config::getDBUser(), Config::getDBPassword()) or die ("Error: Could not connect to database. (" . mysql_error($link) . ")");
+		$link = mysql_connect(Config::getDBHost(), Config::getDBUser(), Config::getDBPassword()) or die ("Error: Could not connect to database. (" . mysql_error($link) . ")");
 		mysql_select_db(Config::getDBDatabase(), $link) or die ("Error: Could not connect to database. (" . mysql_error($link) . ")");
 		return $link;
 	}
