@@ -54,7 +54,7 @@ $(document).ready(function() {
 			.fail(function() {
 				$("#loading").hide();
 				displayAlert(data.replace("ERROR: ", "Error loading data"));
-			})
+			});
 	}
 	
 	getInfo();
