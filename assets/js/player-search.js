@@ -38,8 +38,14 @@ $(document).ready(function() {
 			
 		lastPlayer = player;
 			
-		$.get("./assets/php/get-player.php", { name: player }))
-			.done(function(data) {
+		
+		$.ajax({
+			type: "POST",
+			data: { name: player },
+			url: "./assets/php/get-player.php",
+			context: document.body,
+			cache: false,
+			success: function(data) {
 				if (data.indexOf("ERROR") != -1) {
 					displayAlert(data.replace("ERROR: ", ""));
 					$("#loading").hide();
@@ -50,11 +56,13 @@ $(document).ready(function() {
 				$("#loading").hide();
 				$("#info-wrapper").slideDown();
 				$("#options-wrapper").slideDown();
-			})
-			.fail(function() {
+			},
+			error: function(status, error) {	
 				$("#loading").hide();
-				displayAlert(data.replace("ERROR: ", "Error loading data"));
-			});
+				displayAlert("Error loading data");
+			}
+		});
+		
 	}
 	
 	getInfo();
