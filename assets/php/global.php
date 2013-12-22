@@ -84,22 +84,22 @@ class Config {
 
 	public static function getDBHost() {
 		self::loadConfig();
-		return self::$json->{'database'}->{'host'};
+		return self::$json->{'databases'}->{'host'};
 	}
 
 	public static function getDBDatabase() {
 		self::loadConfig();
-		return self::$json->{'database'}->{'database'};
+		return self::$json->{'databases'}->{'database'};
 	}
 
 	public static function getDBUser() {
 		self::loadConfig();
-		return self::$json->{'database'}->{'user'};
+		return self::$json->{'databases'}->{'user'};
 	}
 
 	public static function getDBPassword() {
 		self::loadConfig();
-		return self::$json->{'database'}->{'pass'};
+		return self::$json->{'databases'}->{'pass'};
 	}
 
 	public static function getSVHost() {
@@ -142,7 +142,7 @@ class Database {
 
 	public static function openMysqlConnection() {
 		$link = mysql_connect(Config::getDBHost(), Config::getDBUser(), Config::getDBPassword()) or die ("Error: Could not connect to database. (" . mysql_error($link) . ")");
-		mysql_select_db(Config::getDBDatabase(), $link) or die ("Error: Could not connect to database. (" . mysql_error($link) . ")");
+		mysql_select_db(Config::getDBDatabase(), $link) or die ("Error: Could not select database. (" . mysql_error($link) . ")");
 		return $link;
 	}
 }
