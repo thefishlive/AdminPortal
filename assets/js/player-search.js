@@ -59,7 +59,7 @@ $(document).ready(function() {
 			},
 			error: function(status, error) {	
 				$("#loading").hide();
-				displayAlert("Error loading data");
+				displayAlert("Error loading data (" + status + ")");
 			}
 		});
 		
