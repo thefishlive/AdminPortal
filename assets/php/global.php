@@ -1,6 +1,6 @@
 <?php
 
-define ("DEBUG", TRUE)
+define ("DEBUG", TRUE);
 define ("FORUM", 1);
 define ("ASSETS", 2);
 define ("CONTENT", 3);
