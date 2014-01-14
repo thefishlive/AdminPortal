@@ -1,9 +1,12 @@
 <?php
-	require_once 'config.php'
+	require_once 'config.php';
 	$con = Database::openMysqlConnection();
 	$from = strtotime($_POST['timeFrom']);
 	$to = strtotime($_POST['timeTo']);
 	$noof = 0;
+	
+	echo $_POST['timeFrom'] . " " . $_POST['timeTo'] . "<br />";
+	echo $from . " " . $to;
 	
 	$all_chat = mysql_query("SELECT * FROM `lb-chat` WHERE `date` >= '$from' AND `date` <= '$to' LIMIT 0, 100");
 
