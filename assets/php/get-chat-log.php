@@ -1,5 +1,5 @@
 <?php
-	require_once 'config.php';
+	require_once 'global.php';
 	$con = Database::openMysqlConnection();
 	$from = strtotime($_POST['timeFrom']);
 	$to = strtotime($_POST['timeTo']);
